@@ -2,6 +2,11 @@
 #include "windows.h"
 using namespace std;
 
+float V(int Fa, int g, int p)
+{
+	int V = Fa / g * p;
+	return V;
+}
 int main()
 {
     SetConsoleCP(1251);
@@ -9,10 +14,7 @@ int main()
 
     const int p = 1030, g = 10;
     int m = 8, Fa = m * g;
-    float V;
-
-    V = Fa / g * p;
 
     printf("Об’єм зануреної частини судна: ");
-    printf("%f\n", V);
+    printf("%f\n", V(Fa, g, p));
 }
